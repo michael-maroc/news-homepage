@@ -1,0 +1,28 @@
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &__image {
+    width: 40px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
+
+  .hamburger-menu {
+    display: flex;
+    flex-direction: column;
+
+    span {
+      display: flex;
+      width: 2.5rem;
+      background-color: black;
+      height: 0.2rem;
+      transition: all ease-in-out 200ms;
+
+      &:not(:last-child){
+        margin-bottom: 0.25rem;
+      }
+    }
+  }
+}

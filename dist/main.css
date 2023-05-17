@@ -1,15 +1,82 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap");
+p {
+  font-size: 0.9375rem;
+  line-height: 1.6;
+}
+
 html {
   font-size: 100%;
   box-sizing: border-box;
 }
 
 *, *::before, *::after {
+  padding: 0;
+  margin: 0;
   box-sizing: inherit;
 }
 
 body {
-  padding: 0;
-  margin: 0;
+  display: grid;
+  justify-items: center;
+  background-color: hsl(36, 100%, 99%);
   font-family: "Inter", sans-serif;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.nav__image {
+  width: 40px;
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+.nav .hamburger-menu {
+  display: flex;
+  flex-direction: column;
+}
+.nav .hamburger-menu span {
+  display: flex;
+  width: 2.5rem;
+  background-color: black;
+  height: 0.2rem;
+  transition: all ease-in-out 200ms;
+}
+.nav .hamburger-menu span:not(:last-child) {
+  margin-bottom: 0.25rem;
+}
+
+.hero {
+  display: grid;
+  gap: 1.2rem;
+}
+.hero__banner {
+  background-image: url("/images/image-web-3-mobile.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 17.5rem;
+}
+.hero__title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  line-height: 1.1;
+}
+.hero__text {
+  color: hsl(236, 13%, 42%);
+}
+.hero__cta {
+  width: 55%;
+  color: #fff;
+  background-color: hsl(5, 85%, 63%);
+  border: none;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  letter-spacing: 4px;
+}
+
+.grid {
+  width: 90%;
 }/*# sourceMappingURL=main.css.map */

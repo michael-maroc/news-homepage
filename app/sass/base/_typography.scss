@@ -1,3 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap');
 
 $font-primary: 'Inter', sans-serif;
+
+$fw-med: 400;
+$fw-bold: 700;
+$fw-xbold: 800;
+
+p {
+  font-size: 0.9375rem;
+  line-height: 1.6;
+}
