@@ -8,7 +8,7 @@
   background-color: $Verydarkgraysihblue;
 
   &__title {
-    font-size: 2rem;
+    font-size: calc(2rem + 0.390625vw);
     font-weight: 700;
     color: $Softorange;
   }
@@ -24,7 +24,7 @@
   }
 
   &__link {
-    font-size: 1.2rem;
+    font-size: calc(1.2rem + 0.390625vw);
     font-weight: $fw-bold;
     color: $Offwhite;
     cursor: pointer;
