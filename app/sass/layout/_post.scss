@@ -1,0 +1,52 @@
+@use "../abstracts/colors" as *;
+@use "../base/typography" as *;
+
+.post {
+  display: grid;
+  gap: 1rem;
+
+  &__card {
+    display: grid;
+    grid-template-columns: 90px 1fr;
+    gap: 1rem;
+  }
+
+  &__image {
+    // width: 100px;
+    // height: -webkit-fill-available;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    &--img-1 {
+      background-image: url('/images/image-retro-pcs.jpg');
+    }
+    &--img-2 {
+      background-image: url('/images/image-top-laptops.jpg');
+    }
+    &--img-3 {
+      background-image: url('/images/image-gaming-growth.jpg');
+    }
+  }
+
+  &__description {
+    display: grid;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+
+  &__title {
+    font-size: 2rem;
+    color: $Grayishblue;
+  }
+
+  &__link {
+    color: #000;
+    font-size: 1.1rem;
+    font-weight: $fw-xbold;
+  }
+
+  &__text {
+
+  }
+}
