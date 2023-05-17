@@ -13,8 +13,9 @@ html {
 }
 
 body {
-  display: grid;
-  justify-items: center;
   background-color: $Offwhite;
   font-family: $font-primary;
+  display: grid;
+  margin-inline: auto;
+  width: 90%;
 }

@@ -1,0 +1,40 @@
+@use "../abstracts/colors" as *;
+@use "../base/typography" as *;
+
+.news {
+  display: grid;
+  gap: 1.5rem;
+  padding: 1.5rem;
+  background-color: $Verydarkgraysihblue;
+
+  &__title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: $Softorange;
+  }
+
+  &__group {
+    display: grid;
+    gap: 2rem;
+  }
+
+  &__card {
+    display: grid;
+    gap: 0.5rem;
+  }
+
+  &__link {
+    font-size: 1.2rem;
+    font-weight: $fw-bold;
+    color: $Offwhite;
+    cursor: pointer;
+
+    &:hover, &:active {
+      color: $Softorange;
+    }
+  }
+
+  &__text {
+    color: grey;
+  }
+}

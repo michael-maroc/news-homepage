@@ -1,12 +1,21 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap');
+@use "../abstracts/colors" as *;
 
+// Font-family
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap');
 $font-primary: 'Inter', sans-serif;
 
+// Font-weights
 $fw-med: 400;
 $fw-bold: 700;
 $fw-xbold: 800;
 
+// General
 p {
   font-size: 0.9375rem;
+  color: $Darkgrayishblue;
   line-height: 1.6;
+}
+
+a, a:active, a:visited {
+  text-decoration: none;
 }

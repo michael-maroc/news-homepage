@@ -7,19 +7,19 @@
     <link rel="stylesheet" href="dist/main.css">
     <title>Frontend Mentor | News homepage</title>
   </head>
+  
   <body>
-    <div class="grid">
-
-      <nav class="nav">
-        <img class="nav__image" src="images/logo.svg" alt="Logo">
-
-        <a class="hamburger-menu">
+    <nav class="nav">
+      <img class="nav__image" src="images/logo.svg" alt="Logo">
+      
+      <a class="hamburger-menu">
           <span></span>
           <span></span>
           <span></span>
         </a>
       </nav>
 
+    <div class="grid">
       <section class="hero">
         <div class="hero__banner"></div>
         <h1 class="hero__title">
@@ -30,7 +30,37 @@
         </p>
         <button class="hero__cta">READ MORE</button>
       </section>
-      
+
+      <aside class="news">
+        <h2 class="news__title">New</h2>
+
+        <div class="news__group">
+
+          <div class="news__card">
+            <a href="" class="news__link">Hydrogen VS Electric Cars</a>
+            <p class="news__text">Will hydrogen-fueled cars ever catch up to EVs?</p>
+          </div>
+  
+          <hr>
+
+          <div class="news__card">
+            <a href="" class="news__link">The Downsides of AI Artistry</a>
+            <p class="news__text">
+              What are the possible adverse effects of on-demand AI image generation?
+            </p>
+          </div>
+
+          <hr>
+  
+          <div class="news__card">
+            <a href="" class="news__link">Is VC Funding Drying Up?</a>
+            <p class="news__text">
+              Private funding by VC firms is down 50% YOY. We take a look at what that means.
+            </p>
+          </div>
+
+        </div>
+      </aside>
     </div>
   </body>
 </html>

@@ -5,13 +5,12 @@
 
   &__image {
     width: 40px;
-    padding-top: 25px;
-    padding-bottom: 25px;
   }
 
   .hamburger-menu {
     display: flex;
     flex-direction: column;
+    cursor: pointer;
 
     span {
       display: flex;

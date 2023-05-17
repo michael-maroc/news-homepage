@@ -1,7 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap");
 p {
   font-size: 0.9375rem;
+  color: hsl(236, 13%, 42%);
   line-height: 1.6;
+}
+
+a, a:active, a:visited {
+  text-decoration: none;
 }
 
 html {
@@ -16,10 +21,11 @@ html {
 }
 
 body {
-  display: grid;
-  justify-items: center;
   background-color: hsl(36, 100%, 99%);
   font-family: "Inter", sans-serif;
+  display: grid;
+  margin-inline: auto;
+  width: 90%;
 }
 
 .nav {
@@ -29,12 +35,11 @@ body {
 }
 .nav__image {
   width: 40px;
-  padding-top: 25px;
-  padding-bottom: 25px;
 }
 .nav .hamburger-menu {
   display: flex;
   flex-direction: column;
+  cursor: pointer;
 }
 .nav .hamburger-menu span {
   display: flex;
@@ -64,9 +69,6 @@ body {
   font-weight: 800;
   line-height: 1.1;
 }
-.hero__text {
-  color: hsl(236, 13%, 42%);
-}
 .hero__cta {
   width: 55%;
   color: #fff;
@@ -75,8 +77,47 @@ body {
   padding-top: 15px;
   padding-bottom: 15px;
   letter-spacing: 4px;
+  cursor: pointer;
+}
+.hero__cta:hover, .hero__cta:active {
+  background-color: hsl(240, 100%, 5%);
 }
 
 .grid {
-  width: 90%;
+  display: grid;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  gap: 4rem;
+}
+
+.news {
+  display: grid;
+  gap: 1.5rem;
+  padding: 1.5rem;
+  background-color: hsl(240, 100%, 5%);
+}
+.news__title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: hsl(35, 77%, 62%);
+}
+.news__group {
+  display: grid;
+  gap: 2rem;
+}
+.news__card {
+  display: grid;
+  gap: 0.5rem;
+}
+.news__link {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: hsl(36, 100%, 99%);
+  cursor: pointer;
+}
+.news__link:hover, .news__link:active {
+  color: hsl(35, 77%, 62%);
+}
+.news__text {
+  color: grey;
 }/*# sourceMappingURL=main.css.map */
