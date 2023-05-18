@@ -1,6 +1,40 @@
+@use "../utils/breakpoints" as *;
+
 .grid {
   display: grid;
+  grid-template-columns: 1fr;
   padding-top: 2rem;
   padding-bottom: 2rem;
-  gap: 4rem;
+}
+
+@include breakpoint-up(xlarge){
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 2rem;
+
+    .hero {
+      justify-items: normal;
+      grid-column: span 2;
+      gap: 2rem;
+      grid-template-columns: 1fr 1fr;
+      grid-template-areas: 
+        "banner banner"
+        "title text"
+        "title btn"
+      ;
+      
+      &__banner {
+        grid-area: banner;
+      }
+      &__title {
+        grid-area: title;
+      }
+      &__text {
+        grid-area: text;
+      }
+      &__cta {
+        grid-area: btn;
+      }
+    }
+  }
 }

@@ -9,6 +9,10 @@ a, a:active, a:visited {
   text-decoration: none;
 }
 
+hr {
+  height: 1px;
+}
+
 html {
   height: 100%;
   font-size: 100%;
@@ -22,7 +26,6 @@ html {
 }
 
 body {
-  height: 100%;
   background-color: hsl(36, 100%, 99%);
   font-family: "Inter", sans-serif;
   display: grid;
@@ -62,6 +65,7 @@ body {
 
 .hero {
   display: grid;
+  margin-bottom: 3rem;
   gap: 1.2rem;
 }
 @media (min-width: 40em) {
@@ -75,10 +79,15 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
-  height: 17.5rem;
+  min-height: 20rem;
+}
+@media (min-width: 64em) {
+  .hero__banner {
+    background-image: url("/images/image-web-3-desktop.jpg");
+  }
 }
 .hero__title {
-  font-size: calc(2.5rem + 0.390625vw);
+  font-size: calc(2.7rem + 0.390625vw);
   font-weight: 800;
   line-height: 1.1;
 }
@@ -87,9 +96,20 @@ body {
     text-align: center;
   }
 }
+@media (min-width: 87.5em) {
+  .hero__title {
+    text-align: initial;
+    font-size: 4rem;
+  }
+}
 @media (min-width: 40em) {
   .hero__text {
     text-align: center;
+  }
+}
+@media (min-width: 87.5em) {
+  .hero__text {
+    text-align: initial;
   }
 }
 .hero__cta {
@@ -109,15 +129,42 @@ body {
 
 .grid {
   display: grid;
+  grid-template-columns: 1fr;
   padding-top: 2rem;
   padding-bottom: 2rem;
-  gap: 4rem;
 }
 
+@media (min-width: 87.5em) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+    -moz-column-gap: 2rem;
+         column-gap: 2rem;
+  }
+  .grid .hero {
+    justify-items: normal;
+    grid-column: span 2;
+    gap: 2rem;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "banner banner" "title text" "title btn";
+  }
+  .grid .hero__banner {
+    grid-area: banner;
+  }
+  .grid .hero__title {
+    grid-area: title;
+  }
+  .grid .hero__text {
+    grid-area: text;
+  }
+  .grid .hero__cta {
+    grid-area: btn;
+  }
+}
 .news {
   display: grid;
   gap: 1.5rem;
   padding: 1.5rem;
+  margin-bottom: 3rem;
   background-color: hsl(240, 100%, 5%);
 }
 .news__title {
@@ -152,8 +199,14 @@ body {
 }
 .post__card {
   display: grid;
-  grid-template-columns: 90px 1fr;
+  grid-template-columns: 5.625rem 1fr;
   gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+@media (min-width: 87.5em) {
+  .post__card {
+    grid-template-columns: 1fr 3fr;
+  }
 }
 .post__image {
   background-position: center;
@@ -182,4 +235,7 @@ body {
   color: #000;
   font-size: calc(1rem + 0.390625vw);
   font-weight: 800;
+}
+.post__link:hover, .post__link:active {
+  color: hsl(5, 85%, 63%);
 }/*# sourceMappingURL=main.css.map */
