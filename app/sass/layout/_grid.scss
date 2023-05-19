@@ -2,16 +2,31 @@
 
 .grid {
   display: grid;
-  grid-template-columns: 1fr;
-  padding-top: 2rem;
-  padding-bottom: 2rem;
+  gap: 2rem;
+  width: 96%;
+  margin-inline: auto;
+  
+  @include breakpoint-up(medium){
+    width: 90%;
+  }
 }
 
-@include breakpoint-up(xlarge){
+
+@include breakpoint-up(xlarge) {
   .grid {
     grid-template-columns: repeat(3, 1fr);
     column-gap: 2rem;
-
+    grid-template-areas: 
+      "nav nav nav"
+      "hero hero aside"
+      "hero hero aside"
+      "post post post"
+    ;
+  
+    .nav {
+      grid-area: nav;
+    }
+  
     .hero {
       justify-items: normal;
       grid-column: span 2;

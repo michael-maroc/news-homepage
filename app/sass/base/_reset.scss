@@ -20,8 +20,9 @@ body {
   display: grid;
   margin-inline: auto;
   min-width: 320px;
-
-  @include breakpoint-up(medium){
-    width: 90%;
-  }
+  min-height: 100%;
+  align-content: center;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
 }
+

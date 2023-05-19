@@ -14,6 +14,7 @@
 
     @include breakpoint-up(xlarge) {
       grid-template-columns: 1fr 3fr;
+      margin-bottom: 0;
     }
   }
 

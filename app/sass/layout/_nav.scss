@@ -1,17 +1,27 @@
+@use "../utils/breakpoints" as *;
+@use "../abstracts/colors" as *;
+
 .nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-top: 2rem;
 
   &__image {
     width: 40px;
+
+    @include breakpoint-up(medium) {
+      width: 60px;
+    }
   }
 
   .hamburger-menu {
     display: flex;
     flex-direction: column;
     cursor: pointer;
+
+    @include breakpoint-up(large) {
+      display: none;
+    }
 
     span {
       display: flex;
@@ -22,6 +32,27 @@
 
       &:not(:last-child){
         margin-bottom: 0.25rem;
+      }
+    }
+  }
+
+  ul {
+    @include breakpoint-down(medium) {
+      display: none;
+    }
+
+    li {
+      &:not(:last-child){
+        margin-right: 2.8rem;
+      }
+    }
+
+    a {
+      font-size: calc(13px + 0.390625vw);
+      color: #000;
+      
+      &:hover, &:active {
+        color: $Softred;
       }
     }
   }
