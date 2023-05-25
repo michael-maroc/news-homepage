@@ -49,13 +49,13 @@
 
   &__cta {
     width: 50%;
-    font-size: calc(13px + 0.390625vw);
+    font-size: clamp(0.8125rem, 0.8125rem + 0.390625vw, 1rem);
     color: #fff;
     background-color: $Softred;
     border: none;
-    padding-top: 15px;
-    padding-bottom: 15px;
-    letter-spacing: 4px;
+    letter-spacing: 0.25rem;
+    padding-top: 0.8rem;
+    padding-bottom: 0.8rem;
     cursor: pointer;
 
     &:hover, &:active {

@@ -2,19 +2,22 @@
 @use "../abstracts/colors" as *;
 
 .nav {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
 
   &__image {
-    width: 40px;
+    width: 2.25rem;
 
     @include breakpoint-up(medium) {
-      width: 60px;
+      width: 3.75rem;
     }
   }
 
   .hamburger-menu {
+    position: absolute;
+    right: 0;
     display: flex;
     flex-direction: column;
     cursor: pointer;
@@ -35,25 +38,12 @@
       }
     }
   }
-
-  ul {
-    @include breakpoint-down(medium) {
-      display: none;
-    }
-
-    li {
-      &:not(:last-child){
-        margin-right: 2.8rem;
-      }
-    }
-
-    a {
-      font-size: calc(13px + 0.390625vw);
-      color: #000;
-      
-      &:hover, &:active {
-        color: $Softred;
-      }
+  
+  a {
+    color: #000;
+    
+    &:hover, &:active {
+      color: $Softred;
     }
   }
 }

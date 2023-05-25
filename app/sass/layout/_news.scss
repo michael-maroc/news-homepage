@@ -9,7 +9,7 @@
   background-color: $Verydarkgraysihblue;
 
   &__title {
-    font-size: calc(2rem + 0.390625vw);
+    font-size: clamp(2rem, 2rem + 0.390625vw, 2.3125rem);
     font-weight: 700;
     color: $Softorange;
   }

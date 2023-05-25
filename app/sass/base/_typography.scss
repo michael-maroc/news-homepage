@@ -9,23 +9,3 @@ $font-primary: 'Inter', sans-serif;
 $fw-med: 400;
 $fw-bold: 700;
 $fw-xbold: 800;
-
-// General
-ul {
-  list-style-type: none;
-  display: flex;
-}
-
-p {
-  font-size: calc(13px + 0.390625vw);
-  color: $Darkgrayishblue;
-  line-height: 1.6;
-}
-
-a, a:visited, a:active {
-  text-decoration: none;
-}
-
-hr {
-  height: 1px;
-}
