@@ -32,8 +32,11 @@
     @include breakpoint-up(medium) {
       text-align: center;
     }
-    @include breakpoint-up(xlarge) {
+    @include breakpoint-up(large) {
       text-align:initial;
+      font-size: 3.1875rem;
+    }
+    @include breakpoint-up(xlarge) {
       font-size: 4rem;
     }
   }
@@ -42,14 +45,13 @@
     @include breakpoint-up(medium) {
       text-align: center;
     }
-    @include breakpoint-up(xlarge) {
+    @include breakpoint-up(large) {
       text-align:initial;
     }
   }
 
   &__cta {
     width: 50%;
-    font-size: clamp(0.8125rem, 0.8125rem + 0.390625vw, 1rem);
     color: #fff;
     background-color: $Softred;
     border: none;

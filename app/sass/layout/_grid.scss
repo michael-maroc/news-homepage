@@ -5,18 +5,20 @@
   gap: 2rem;
   width: 96%;
   margin-inline: auto;
-  max-width: 1400px;
   
   @include breakpoint-up(medium){
     width: 90%;
   }
+  @include breakpoint-up(large) {
+    width: 96%;
+  }
 }
 
 
-@include breakpoint-up(xlarge) {
+@include breakpoint-up(large) {
   .grid {
     grid-template-columns: repeat(3, 1fr);
-    column-gap: 2rem;
+    column-gap: 1.5rem;
     grid-template-areas: 
       "nav nav nav"
       "hero hero aside"

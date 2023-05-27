@@ -1,5 +1,6 @@
 @use "../abstracts/colors" as *;
 @use "../base/typography" as *;
+@use "../utils/breakpoints" as *;
 
 .news {
   display: grid;
@@ -7,6 +8,10 @@
   padding: 1.5rem;
   margin-bottom: 2rem;
   background-color: $Verydarkgraysihblue;
+
+  @include breakpoint-up(large) {
+    gap: 0;
+  }
 
   &__title {
     font-size: clamp(2rem, 2rem + 0.390625vw, 2.3125rem);
@@ -16,7 +21,7 @@
 
   &__group {
     display: grid;
-    gap: 2rem;
+    gap: 1.5rem;
   }
 
   &__card {
@@ -29,6 +34,13 @@
     font-weight: $fw-bold;
     color: $Offwhite;
     cursor: pointer;
+
+    @include breakpoint-up(large) {
+      font-size: 1.125rem;
+    }
+    @include breakpoint-up(xlarge) {
+      font-size: 1.5625rem;
+    }
 
     &:hover, &:active {
       color: $Softorange;

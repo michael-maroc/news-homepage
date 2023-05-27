@@ -46,4 +46,23 @@
       color: $Softred;
     }
   }
+  
+  .desktop-menu {
+    list-style-type: none;
+    display: flex;
+  
+    @include breakpoint-down(medium) {
+      display: none;
+    }
+  
+    li {
+      &:not(:last-child){
+        margin-right: 3.2rem;
+  
+        @include breakpoint-up(xlarge) {
+          margin-right: 3.9rem;
+        }
+      }
+    }
+  }
 }

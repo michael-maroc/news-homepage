@@ -24,6 +24,7 @@ body {
   align-content: center;
   padding-top: 2rem;
   padding-bottom: 2rem;
+  max-width: 1440px;
 
   &.open {
     position: fixed;
@@ -31,6 +32,22 @@ body {
     .overlay {
       visibility: visible;
       opacity: 1;
+    }
+
+    .hamburger-menu {
+      span {
+        transform-origin: 10px 2px;
+
+        &:first-child {
+          transform: rotate(45deg);
+        }
+        &:nth-child(2){
+          opacity: 0;
+        }
+        &:last-child {
+          transform: rotate(-45deg);
+        }
+      }
     }
   }
 }
@@ -43,6 +60,14 @@ p {
   font-size: clamp(0.8125rem, 0.8125rem + 0.390625vw, 1.125rem);
   color: $Darkgrayishblue;
   line-height: 1.6;
+
+  @include breakpoint-up(large) {
+    font-size: 0.9375rem;
+  }
+  
+  @include breakpoint-up(xlarge) {
+    font-size: 1.1875rem;
+  }
 }
 
 a {
@@ -95,21 +120,6 @@ hr {
       &:hover, &:active {
         color: $Softred;
       }
-    }
-  }
-}
-
-.desktop-menu {
-  list-style-type: none;
-  display: flex;
-
-  @include breakpoint-down(medium) {
-    display: none;
-  }
-
-  li {
-    &:not(:last-child){
-      margin-right: 3.2rem;
     }
   }
 }
